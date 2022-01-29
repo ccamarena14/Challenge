@@ -1,0 +1,4 @@
+Run the "Challenge" project
+Write the file path "challenge.in", otherwise leave blank, and the application takes the internal file.
+Write the output path for the "challenge.out" file, else leave blank, and the application takes the same path as the "challenge.in" file.
+The system sends a confirmation message of the created file.
