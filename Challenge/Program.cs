@@ -23,9 +23,8 @@ namespace Challenge
         {
             try
             {
-                Console.Write("Enter file path: ");
+                Console.Write("Enter file path (or the enter key to take internal file): ");
                 var path = Console.ReadLine();
-
                 if (!FileCommon.FileExists(ref path)) return;
 
                 var dataFileList = await FileCommon.ReadFile(path);
@@ -40,7 +39,6 @@ namespace Challenge
                 if (outputConfigurationList == null) return;
 
                 await FileCommon.SaveFile(outputConfigurationList);
-                
             }
             catch (Exception ex)
             {

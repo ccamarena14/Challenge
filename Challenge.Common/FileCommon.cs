@@ -19,14 +19,10 @@ namespace Challenge.Common
         {
             try
             {
-                if (!File.Exists(Path.Combine(path, "challenge.in")))
+                path = Path.Combine(path, StringCommon.Instance.InputFileName);
+                if (!File.Exists(path))
                 {
                     Console.WriteLine($"Invalid path, the internal file will be processed.");
-                    path = StringCommon.Instance.InputFileName;
-                }
-                if (string.IsNullOrEmpty(path))
-                {
-                    Console.WriteLine($"Internal file will be processed.");
                     path = StringCommon.Instance.InputFileName;
                 }
                 return true;
